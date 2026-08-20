@@ -31,7 +31,8 @@
       --color-apple-blue-hover: #147ce5;
       --color-apple-green: #30d158;
       --color-apple-purple: #bf5af2;
-      --color-apple-orange: #ff9f0a;
+      --color-apple-cyan: #64d2ff;
+      --color-apple-teal: #30b0c7;
       --color-nav-bg: rgba(22, 22, 23, 0.8);
       
       --radius-sm: 8px;
@@ -66,7 +67,8 @@
       --color-apple-blue-hover: #0077ed;
       --color-apple-green: #28cd41;
       --color-apple-purple: #af52de;
-      --color-apple-orange: #ff9500;
+      --color-apple-cyan: #00c7be;
+      --color-apple-teal: #008f88;
       --color-nav-bg: rgba(245, 245, 247, 0.82);
       
       --shadow-apple: 0 12px 32px rgba(0, 0, 0, 0.06);
@@ -283,7 +285,7 @@
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: var(--color-apple-orange);
+      color: var(--color-apple-cyan);
       margin-bottom: 8px;
       font-family: var(--font-system);
     }
@@ -441,6 +443,31 @@
       width: fit-content;
       margin-bottom: 18px;
       border: 1px solid var(--color-border-subtle);
+    }
+    .badge-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    .badge-group .bento-badge {
+      margin-bottom: 0;
+    }
+    .bento-badge.badge-podcasts {
+      color: #bf5af2;
+      background: rgba(191, 90, 242, 0.12);
+      border-color: rgba(191, 90, 242, 0.28);
+    }
+    [data-theme="light"] .bento-badge.badge-podcasts {
+      color: #8929bf;
+      background: rgba(175, 82, 222, 0.1);
+      border-color: rgba(175, 82, 222, 0.25);
+    }
+    .bento-badge.badge-partner-launch {
+      color: var(--color-apple-cyan);
+      background: rgba(255, 159, 10, 0.12);
+      border-color: rgba(255, 159, 10, 0.25);
     }
 
     .bento-card h3 {
@@ -679,7 +706,7 @@
       font-size: 12px;
       padding: 8px 10px;
       background: var(--color-bg-secondary);
-      border-left: 3px solid var(--color-apple-orange);
+      border-left: 3px solid var(--color-apple-cyan);
       border-radius: 4px;
       margin-bottom: 12px;
       line-height: 1.4;
@@ -873,7 +900,7 @@
       font-size: 24px;
       font-weight: 800;
       letter-spacing: -0.03em;
-      color: var(--color-apple-orange);
+      color: var(--color-apple-cyan);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -954,7 +981,7 @@
       font-family: var(--font-mono);
       font-size: 11px;
       font-weight: 700;
-      color: var(--color-apple-orange);
+      color: var(--color-apple-cyan);
       display: flex;
       align-items: center;
       gap: 6px;
@@ -1137,7 +1164,7 @@
       <ul class="nav-links">
         <li><a href="#overview">Overview</a></li>
         <li><a href="#achievements">Projects</a></li>
-        <li><a href="#pipeline">Automation</a></li>
+        <li><a href="#pipeline">Automation Tools</a></li>
         <li><a href="#expertise">Expertise</a></li>
       </ul>
 
@@ -1198,22 +1225,25 @@
         <!-- Project 1: Ximalaya Partner Launch -->
         <div class="showcase-item">
           <div>
-            <div class="bento-badge" style="color: var(--color-apple-orange); background: rgba(255, 159, 10, 0.1);">Podcasts · Partner Launch</div>
-            <h3 style="margin-bottom: 20px;">Ximalaya 喜马拉雅 — Podcasts: Partner Launch</h3>
+            <div class="badge-group">
+              <span class="bento-badge badge-podcasts">Apple Podcasts</span>
+              <span class="bento-badge badge-partner-enablement">Partner Enablement</span>
+            </div>
+            <h3 style="margin-bottom: 20px;">Ximalaya 喜马拉雅 Launch</h3>
 
             <div class="showcase-section-block">
               <h5 class="showcase-subhead">Why</h5>
-              <p>Ximalaya, China's leading online audio platform, was joining Apple Podcasts, but their design team had no prior exposure to Apple's asset specifications, risking high rejection rates ahead of the September 2024 launch.</p>
+              <p>Ximalaya, China's largest online audio platform, was joining Apple Podcasts but their design team had no prior exposure to Apple's asset specifications, risking high rejection rates ahead of the September 2024 launch.</p>
             </div>
 
             <div class="showcase-section-block">
               <h5 class="showcase-subhead">What / How</h5>
-              <p>As sole Partner Asset Manager with Mandarin proficiency, I developed and delivered tailored Partner Art training for Ximalaya's designers, then project managed asset delivery across Business, Editorial, Design and Partner stakeholders to hit delivery milestones. The training became a reusable template, used to onboard internal Editorial and Design teams and repeatedly redelivered to Ximalaya given their high designer turnover.</p>
+              <p>As sole Partner Asset Manager with Mandarin proficiency, I developed and delivered tailored Partner Art training for Ximalaya's designers, then project managed asset delivery across Business, Editorial, Design and Partner stakeholders to hit delivery milestones. The training became a reusable template, used to onboard internal Editorial and Design teams, and has continued to support Ximalaya's design team through multiple redeliveries.</p>
             </div>
 
             <div class="showcase-section-block">
               <h5 class="showcase-subhead">Impact</h5>
-              <p>Reduced asset rejection rates from a peak of 73% early in the review cycle to near 0% in the cycles immediately preceding launch, following delivery of tailored training and hands-on guidance, supporting an on-time launch. Processed 291 assets across Show, Channel and Subscription pages, and reviewed 35 Channel Pages and 128 Show Pages to confirm accurate display at launch.</p>
+              <p>Reduced asset rejection rates from a peak of 73% early in the review cycle to near 0% in the cycles immediately preceding launch, following delivery of tailored training and hands-on guidance, supporting an on-time launch. The partnership has continued since, with Ximalaya's catalogue now surpassing 10 million episodes on Apple Podcasts.</p>
             </div>
           </div>
 
@@ -1249,7 +1279,7 @@
             <div class="doc-showcase-card">
               <div class="doc-card-header">
                 <span class="doc-card-tag">📋 Asset Delivery Plan</span>
-                <span class="doc-card-badge">Batch & Delivery Spec</span>
+                
               </div>
               <div class="doc-image-wrap">
                 <img src="xmly-asset-delivery-plan.png" alt="Project Orchid Asset Delivery Plan Quip Document" class="doc-image">
@@ -1260,7 +1290,7 @@
             <div class="doc-showcase-card">
               <div class="doc-card-header">
                 <span class="doc-card-tag">🗓️ Master Timeline</span>
-                <span class="doc-card-badge">Sprint & Launch Schedule</span>
+                
               </div>
               <div class="doc-image-wrap">
                 <img src="xmly-master-timeline.png" alt="Project Orchid Master Timeline Quip Document" class="doc-image">
@@ -1269,15 +1299,18 @@
           </div>
         </div>
 
-        <!-- Project 2: Apple TV Platform Redesign Brand Page Audit -->
+        <!-- Project 2: Brand Page Audit -->
         <div class="showcase-item">
           <div>
-            <div class="bento-badge" style="color: var(--color-apple-blue); background: rgba(41, 151, 255, 0.1);">Apple TV · Platform Redesign</div>
-            <h3 style="margin-bottom: 20px;">Apple TV — Platform Redesign: Brand Page Audit</h3>
+            <div class="badge-group">
+              <span class="bento-badge badge-appletv">Apple TV</span>
+              <span class="bento-badge badge-cross-platform">Cross-Platform Delivery</span>
+            </div>
+            <h3 style="margin-bottom: 20px;">Brand Page Audit</h3>
 
             <div class="showcase-section-block">
               <h5 class="showcase-subhead">Why</h5>
-              <p>Following a platform redesign, an engineering automation gap left 112 International Channel and Federated partners without updated artwork across several key promotional placements, risking an inconsistent experience for Apple TV users worldwide.</p>
+              <p>Following a platform redesign, an engineering automation gap left 112 international partners without updated artwork across several key offer placements, cascading across macOS, iPadOS and iOS and risking an inconsistent experience for Apple TV users worldwide.</p>
             </div>
 
             <div class="showcase-section-block">
@@ -1287,7 +1320,7 @@
 
             <div class="showcase-section-block">
               <h5 class="showcase-subhead">Impact</h5>
-              <p>Restored a consistent, up-to-date experience for Apple TV users worldwide across all 112 partners. Delivered 924 new assets spanning multiple placement types, turning a reactive engineering gap into a structured, repeatable remediation process.</p>
+              <p>Restored a consistent, up-to-date experience for Apple TV users across macOS, iPadOS and iOS, spanning all 112 partners, with 924 new assets delivered at scale.</p>
             </div>
           </div>
 
@@ -1312,7 +1345,7 @@
         <!-- Automation Item 1: BA Art Reviewer -->
         <div class="showcase-item">
           <div>
-            <div class="bento-badge" style="color: var(--color-apple-orange); background: rgba(255, 159, 10, 0.1);">Slack Bot & Workflow Automation</div>
+            <div class="bento-badge" class="bento-badge badge-slackbot">Slack Bot & Workflow Automation</div>
             <h3 style="margin-bottom: 20px;">BA Art Reviewer</h3>
 
             <div class="showcase-section-block">
@@ -1546,7 +1579,7 @@
         <div class="footer-links">
           <a href="#overview">Overview</a>
           <a href="#achievements">Projects</a>
-          <a href="#pipeline">Automation</a>
+          <a href="#pipeline">Automation Tools</a>
           <a href="#expertise">Expertise</a>
         </div>
       </div>
