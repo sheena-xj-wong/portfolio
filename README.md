@@ -1,54 +1,88 @@
-# Sheena Wong — Portfolio & "Some Things I’ve Done"
+# Sheena Wong — Portfolio
 
-A sleek, responsive, Apple-inspired portfolio and project showcase built for **GitHub Pages**.
+Personal portfolio and project showcase for **Sheena Wong** — Partner Operations & Programme Management professional bridging partner enablement, scalable process design, and cross-functional delivery across APAC.
+
+Live Site: **[sheena-xj-wong.github.io/portfolio/](https://sheena-xj-wong.github.io/portfolio/)**
 
 ---
 
 ## 🌟 Overview & Highlights
 
-- **Aesthetic**: Minimalist Apple design with glassmorphism, glowing ambient accents, and responsive typography.
-- **Light/Dark Mode**: Built-in toggle with system preference detection and localStorage persistence.
-- **Interactive Filtering**: Filter showcase items across *Automation & Tech*, *Editorial & QC*, and *Operations & Leadership*.
-- **1-Click PDF Export**: Clean `@media print` CSS built-in for instant 1-page summary exports.
-- **Zero Dependencies**: Pure HTML, CSS, and vanilla JS — loads instantly with 100/100 Lighthouse performance.
+- **Aesthetic**: Authentic Apple Human Interface Design — clean glassmorphism navigation, Keynote-style typography hierarchy, and a refined Dark / Light mode system.
+- **Hero Greeting**: Iconic Apple cursive **`hello.`** animated vector with continuous Lottie JSON loop support and light/dark theme auto-inversion.
+- **Brand Identity**: Framed circular Memoji avatar in the top navigation bar with interactive hover lift.
+- **Palette**: Signature Apple Blue (`#2997ff` / `#0071e3`), Podcasts Purple (`#bf5af2`), and Electric Apple Cyan (`#64d2ff` / `#00c7be`).
+- **Responsive Architecture**: Pixel-perfect layout across desktop, tablet, and iPhone viewports with zero layout shift.
+- **High Performance**: 100% lightweight vanilla HTML/CSS/JS with standalone asset embedding.
 
 ---
 
-## 🚀 How to Publish to GitHub Pages
+## 🗂️ Sections & Structure
 
-### Option 1: Using GitHub Web UI (Fastest — 1 Minute)
-1. Create a new repository on GitHub (e.g. `brag-book` or `<your-username>.github.io`).
-2. Upload `index.html` (and this `README.md`) directly to the repository root.
-3. Go to **Settings** → **Pages** (in the left sidebar).
-4. Under **Build and deployment** → **Source**, select **Deploy from a branch**.
-5. Choose branch `main` and folder `/ (root)`, then click **Save**.
-6. Your live site will be ready at: `https://<your-username>.github.io/<repo-name>/`
+### 1. Hero (`#overview`)
+- Eyebrow: `PARTNER OPERATIONS AND PROGRAMME MANAGEMENT`
+- Main Headline: Looping Apple `hello.` signature calligraphy
+- Subtitle: *"Bridging partner enablement, scalable process design and cross-functional delivery across APAC."*
+- CTA Buttons: `View Projects` ➔ `#achievements`, `View Automation Tools` ➔ `#pipeline`
+
+### 2. WORK I’VE LED — Projects (`#achievements`)
+- **Ximalaya 喜马拉雅 Launch** `[APPLE PODCASTS]` `[PARTNER ENABLEMENT]` `[CROSS-FUNCTIONAL DELIVERY]`
+  - Key Metrics: `73% → ~0%` Rejection Rate, `291` Assets Processed, `35` Channel Pages Reviewed, `128` Show Pages Verified
+  - Document Showcase Gallery: *Asset Delivery Plan* & *Master Timeline*
+- **Brand Page Audit** `[APPLE TV]` `[CROSS-PLATFORM DELIVERY]`
+  - Remediation of multi-title promotional artwork format across 112 international partners and 924 assets spanning macOS, iPadOS, and iOS.
+
+### 3. TOOLS I’VE BUILT — Automation & Workflow Design (`#pipeline`)
+- **BA Art Reviewer** `[APPLE PODCASTS]` `[AI-ASSISTED TOOLING]` `[API INTEGRATION]`
+  - Automated Slack bot integrating public podcast metadata, translation API, and Slack Web API to streamline Business Affairs review workflows.
+- **Apple Originals: Programming Reminders** `[APPLE TV]` `[PROCESS AUTOMATION]` `[AGENT DESIGN]`
+  - Serverless scheduled Python compute agent querying Quip trackers and distributing weekly refresh digests.
+- **TV Title Launch Checker** `[APPLE TV]` `[AI-ASSISTED TOOLING]` `[DATA VALIDATION]`
+  - Web-based validation tool cross-referencing Airtable title lists against Quip priorities to prevent launch timing discrepancies.
+
+### 4. WHAT I BRING — Expertise (`#expertise`)
+- **🎯 Core Competencies**: Programme Management · Cross-functional Delivery · Process Automation & Scalability · Partner Enablement & Onboarding · KPI Definition & Reporting · APAC & International Operations
+- **🛠️ Tools & Systems**: Airtable · Coda · Quip · GitHub · Enchanté · Interlinked · Myna · Radar · Gadget · Conductor · Apple Studio · Chaplin · Milan · Box · OneDAM
+
+### 5. Minimal Footer
+- `© 2026 Sheena Wong`
 
 ---
 
-### Option 2: Using Terminal / Git CLI
+## 🖼️ Required Repository Assets
+
+Ensure the following assets are present in the root folder alongside `index.html`:
+
+| Asset Filename | Description | Location in Site |
+| :--- | :--- | :--- |
+| `memoji.png` | Circular profile avatar | Top-left Navigation Bar |
+| `hello.json` | Lottie signature animation | Top Hero Headline |
+| `apple-hello.svg` | Vector fallback for hello | Top Hero Headline (Fallback) |
+| `ximalaya-showcase.png` | Podcasts campaign hero artwork | Ximalaya Project Card |
+| `xmly-asset-delivery-plan.png` | Quip Asset Delivery Plan screenshot | Ximalaya Document Gallery |
+| `xmly-master-timeline.png` | Quip Master Timeline screenshot | Ximalaya Document Gallery |
+| `brand-page-audit.png` | AMC+ Apple TV platform audit screenshot | Brand Page Audit Card |
+| `apple-originals-reminders.png` | macOS Mail summary digest screenshot | Programming Reminders Card |
+| `tv-title-checker.png` | Web tool interface screenshot | TV Title Launch Checker Card |
+
+---
+
+## 🚀 Publishing Updates to GitHub Pages
+
+### Option 1: GitHub Web UI (Fastest)
+1. Go to your repository: **[github.com/sheena-xj-wong/portfolio](https://github.com/sheena-xj-wong/portfolio)**
+2. Click **Add file → Upload files**.
+3. Drag and drop `index.html`, `README.md`, and any new/updated image assets.
+4. Click **Commit changes**.
+5. Your live site will automatically deploy at `https://sheena-xj-wong.github.io/portfolio/`.
+
+### Option 2: Terminal / Git CLI
 ```bash
-# 1. Initialize git in this folder
-git init -b main
+# Navigate to your local project folder
+cd "/Users/sheenawong/Documents/Enchant"*"/Conversations/BFEDFB39-2112-49B5-8759-BF59DA4C0824"
 
-# 2. Stage and commit
+# Stage, commit, and push
 git add .
-git commit -m "feat: initial brag book portfolio release"
-
-# 3. Link to your GitHub repo and push
-git remote add origin git@github.com:<your-username>/<your-repo-name>.git
-git push -u origin main
+git commit -m "Update portfolio: copy, badges, tools and assets"
+git push origin main
 ```
-Then enable GitHub Pages under **Repository Settings → Pages**.
-
----
-
-## 🖼 Assets & Images
-- **Ximalaya Showcase Image**: Save your image as `ximalaya-showcase.png` in the repository root next to `index.html`.
-
----
-
-## 🛠 Customizing Content
-- **Metrics**: Edit `.metrics-bar` numbers and labels in `index.html`.
-- **Brag Book Items**: Duplicate any `.showcase-card` div with `data-category="automation"`, `"editorial"`, or `"leadership"`.
-- **Colors**: Tweak the CSS custom properties in the `:root` block at the top of `index.html`.
