@@ -195,54 +195,54 @@
     }
 
     /* ==========================================================================
-       Apple Iconic 'hello' Headline (Lottie JSON & SVG)
+       Apple Official 3D Screensaver 'hello' Headline Graphic
        ========================================================================== */
     .hero-headline-hello {
-      margin: 10px auto 20px;
+      margin: 8px auto 20px;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 6px 0;
       overflow: visible;
     }
-    .apple-hello-lottie {
-      width: clamp(240px, 42vw, 480px);
-      height: clamp(100px, 18vw, 200px);
-      max-width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
-      filter: drop-shadow(0 4px 20px rgba(255, 255, 255, 0.25));
-    }
-    .apple-hello-lottie:hover {
-      transform: scale(1.02);
-    }
-    [data-theme="light"] .apple-hello-lottie {
-      filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.1));
-    }
-    .apple-hello-img {
-      width: clamp(240px, 40vw, 460px);
+    .apple-hello-svg {
+      width: clamp(260px, 46vw, 540px);
       max-width: 100%;
       height: auto;
       display: block;
-      object-fit: contain;
       overflow: visible;
-      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
-      filter: drop-shadow(0 4px 24px rgba(255, 255, 255, 0.25));
+      cursor: pointer;
+      filter: drop-shadow(0 6px 28px rgba(41, 151, 255, 0.28));
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .apple-hello-img:hover {
+    .apple-hello-svg:hover {
       transform: scale(1.02);
     }
-    [data-theme="light"] .apple-hello-img {
-      filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.1));
+    [data-theme="light"] .apple-hello-svg {
+      filter: drop-shadow(0 4px 14px rgba(0, 113, 227, 0.14));
     }
-    .theme-invert-dark {
-      filter: invert(1) drop-shadow(0 4px 24px rgba(255, 255, 255, 0.35));
+    .hello-animated-stroke {
+      stroke-dasharray: 8000;
+      stroke-dashoffset: 8000;
+      animation: drawAppleHello 2.6s cubic-bezier(0.65, 0, 0.35, 1) forwards;
     }
-    [data-theme="light"] .theme-invert-dark {
-      filter: invert(0) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.08));
+    .hello-stroke-stem {
+      stroke-dasharray: 1200;
+      stroke-dashoffset: 1200;
+      animation: drawAppleStem 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+    }
+    @keyframes drawAppleStem {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    @keyframes drawAppleHello {
+      0% {
+        stroke-dashoffset: 8000;
+      }
+      100% {
+        stroke-dashoffset: 0;
+      }
     }
 
     /* ==========================================================================
@@ -1088,11 +1088,24 @@
     <section class="hero-section" id="overview">
       <div class="hero-eyebrow">International Partner Asset Management</div>
       
-      <!-- Apple Iconic 'hello' Headline (Supports Lottie JSON, SVG, PNG) -->
+      <!-- Apple Official 'hello' Vector Headline (Extracted directly from Apple's hello.json) -->
       <h1 class="hero-headline-hello">
-        <div id="lottie-hello" class="apple-hello-lottie">
-          <img src="apple-hello.svg" alt="Apple hello" class="apple-hello-img theme-invert-dark" onerror="this.onerror=null; this.src='apple-hello.png';">
-        </div>
+        <svg class="apple-hello-svg" viewBox="-140 -20 2600 800" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Apple Hello">
+          <defs>
+            <linearGradient id="appleHelloGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#2997ff" />
+              <stop offset="30%" stop-color="#af52de" />
+              <stop offset="65%" stop-color="#ff2d55" />
+              <stop offset="100%" stop-color="#ff9500" />
+            </linearGradient>
+          </defs>
+          <g stroke="url(#appleHelloGrad)" stroke-width="32" stroke-linecap="round" stroke-linejoin="round">
+            <!-- Stem Stroke -->
+            <path class="hello-stroke-stem" d="M -109.1 644.1 C 2.0 582.4, 103.1 503.0, 217.9 367.9 C 296.0 275.7, 338.0 170.4, 340.0 97.8 C 341.0 43.8, 314.7 2.8, 266.0 2.8 C 212.0 2.8, 178.0 43.8, 157.0 137.8 C 134.0 241.2, 117.0 359.8, 74.0 740.0" />
+            <!-- Main Continuous Cursive Script -->
+            <path class="hello-animated-stroke" d="M 78.2 702.8 C 100.2 509.3, 184.0 368.0, 291.0 368.0 C 355.0 368.0, 395.7 419.0, 384.1 492.0 C 377.6 535.0, 370.1 579.0, 361.3 630.0 C 351.1 694.0, 380.3 744.0, 469.0 744.0 C 598.2 744.0, 739.2 672.2, 811.4 560.9 C 836.0 523.0, 846.0 489.0, 847.0 456.0 C 848.0 396.0, 814.0 351.0, 754.0 351.0 C 678.0 351.0, 620.0 437.0, 620.0 547.0 C 620.0 665.0, 684.0 748.0, 819.9 748.0 C 1004.7 748.0, 1209.4 526.2, 1303.5 278.6 C 1330.0 208.7, 1340.0 143.8, 1340.0 98.4 C 1340.0 44.6, 1323.0 3.3, 1275.0 3.3 C 1228.0 3.3, 1197.0 39.8, 1169.0 97.4 C 1136.2 164.3, 1111.9 260.7, 1102.0 369.6 C 1077.0 643.1, 1133.0 744.0, 1266.2 744.0 C 1427.6 744.0, 1607.1 519.1, 1698.8 277.8 C 1725.0 208.7, 1735.0 143.8, 1735.0 98.4 C 1735.0 44.6, 1718.0 3.3, 1670.0 3.3 C 1623.0 3.3, 1592.0 39.8, 1564.0 97.4 C 1531.2 164.3, 1506.9 260.7, 1497.0 369.6 C 1472.0 643.1, 1528.0 744.0, 1646.9 744.0 C 1765.6 744.0, 1830.1 640.5, 1868.8 530.6 C 1907.0 422.0, 1954.0 355.0, 2052.0 355.0 C 2133.0 355.0, 2197.0 415.0, 2197.0 528.0 C 2197.0 653.0, 2115.9 747.0, 2013.4 748.0 C 1923.2 749.0, 1864.0 676.0, 1870.0 566.0 C 1877.0 444.0, 1951.0 355.0, 2048.0 355.0 C 2104.0 355.0, 2151.0 379.9, 2188.0 407.0 C 2288.2 480.1, 2365.4 434.9, 2395.0 362.6" />
+          </g>
+        </svg>
       </h1>
 
       <p class="hero-subhead">
