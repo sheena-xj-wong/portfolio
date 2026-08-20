@@ -1081,10 +1081,28 @@
       flex-wrap: wrap;
       gap: 8px;
     }
+    .expertise-subgroup {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--color-border-subtle);
+    }
+    .expertise-subgroup:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    .expertise-subgroup-title {
+      font-size: 11.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-text-secondary);
+    }
     .expertise-tag {
-      font-size: 12.5px;
+      font-size: 12px;
       font-weight: 500;
-      padding: 7px 14px;
+      padding: 6px 13px;
       border-radius: var(--radius-capsule);
       background: var(--color-bg-secondary);
       border: 1px solid var(--color-border-subtle);
@@ -1102,27 +1120,13 @@
       padding: 40px 0 60px;
       font-size: 12px;
       color: var(--color-text-tertiary);
-      line-height: 1.6;
+      text-align: center;
     }
 
     .footer-content {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 20px;
-    }
-    .footer-links a {
-      color: var(--color-text-secondary);
-      text-decoration: none;
-    }
-    .footer-links a:hover {
-      color: var(--color-text-primary);
     }
 
     /* Mobile & Small Screen Optimizations */
@@ -1282,7 +1286,7 @@
             <div class="metric-hero-pill-box">
               <div class="metric-pill-item">
                 <div class="metric-pill-number">73% → ~0%</div>
-                <span class="metric-pill-label">Rejection Rate Drop</span>
+                <span class="metric-pill-label">Rejection Rate</span>
               </div>
               <div class="metric-pill-item">
                 <div class="metric-pill-number">291</div>
@@ -1374,6 +1378,7 @@
             <div class="badge-group">
               <span class="bento-badge badge-podcasts">Apple Podcasts</span>
               <span class="bento-badge badge-blue">AI-Assisted Tooling</span>
+              <span class="bento-badge badge-blue">Workflow Improvement</span>
             </div>
             <h3 style="margin-bottom: 20px;">BA Art Reviewer</h3>
 
@@ -1389,7 +1394,7 @@
 
             <div class="showcase-section-block">
               <h5 class="showcase-subhead">Impact (Projected)</h5>
-              <p>Significantly reduces manual overhead for both the PAM team and Business Affairs. By automating data collection and standardising requests, this tool eliminates time spent on context gathering, accelerates turnaround times for artwork approvals and streamlines the entire escalation workflow.</p>
+              <p>Currently pending security approval ahead of production rollout. Once live, this tool will significantly reduce manual overhead for both the PAM team and Business Affairs; by automating data collection and standardising requests, it will eliminate time spent on context gathering, accelerate turnaround times for artwork approvals and streamline the entire escalation workflow.</p>
             </div>
           </div>
 
@@ -1441,6 +1446,7 @@
             <div class="badge-group">
               <span class="bento-badge badge-appletv">Apple TV</span>
               <span class="bento-badge badge-blue">Process Automation</span>
+              <span class="bento-badge badge-blue">Agent Design</span>
             </div>
             <h3 style="margin-bottom: 20px;">Apple Originals: Programming Reminders</h3>
 
@@ -1471,22 +1477,26 @@
         <!-- Automation Item 3: TV Title Launch Checker -->
         <div class="showcase-item">
           <div>
-            <div class="bento-badge badge-blue">Web App & Workflow Automation</div>
+            <div class="badge-group">
+              <span class="bento-badge badge-appletv">Apple TV</span>
+              <span class="bento-badge badge-blue">AI-Assisted Tooling</span>
+              <span class="bento-badge badge-blue">Data Validation</span>
+            </div>
             <h3 style="margin-bottom: 20px;">TV Title Launch Checker</h3>
 
             <div class="showcase-section-block">
               <h5 class="showcase-subhead">Why</h5>
-              <p>Title lists submitted for Apple Originals Unentitled Epic Stage artwork required manual validation against live TV Title Priorities in Quip and Airtable. Manually checking release schedules across dozens of titles increased the risk of missing new launches, submitting duplicate entries, or missing critical montage refresh cutoffs.</p>
+              <p>Multi-title promotional artwork for Apple Originals relies on title lists submitted by international Editors. Manually validating and cross-checking these against release priorities in Quip was slow and prone to missing or duplicate title entries. This was especially critical before Engineering shipped a fix for a backend timing limitation, when titles launching after a refresh date risked having outdated artwork on an important launch day.</p>
             </div>
 
             <div class="showcase-section-block">
               <h5 class="showcase-subhead">What / How</h5>
-              <p>Developed a web-based automated checker that ingests submitted Airtable title lists and reconciles them against reference launch priorities. By setting the target montage refresh date and time, the tool automatically scans release dates, checks UMC IDs, and flags titles launching after the requested refresh date within the same month.</p>
+              <p>I built a web-based checker that reconciles submitted Airtable title lists against release priorities on Quip, flagging any titles launching after a set refresh date. Editors then have the chance to either move their refresh date or, at minimum, know in advance that some titles won't have the latest artwork at refresh.</p>
             </div>
 
             <div class="showcase-section-block">
               <h5 class="showcase-subhead">Impact</h5>
-              <p>Eliminated manual cross-referencing overhead for Apple Originals montage refreshes, preventing launch date discrepancies, catching missing or duplicate titles before submission, and ensuring 100% accurate Epic Stage curation.</p>
+              <p>Eliminated manual cross-referencing and continues to catch missing or duplicate titles before submission, helping maintain accurate, up-to-date promotional artwork.</p>
             </div>
           </div>
 
@@ -1505,15 +1515,15 @@
     <!-- Capabilities & Expertise Section -->
     <section id="expertise">
       <div class="section-title-wrap">
-        <div class="section-category">CAPABILITIES</div>
-        <h2 class="section-heading">Expertise & Tools</h2>
+        <div class="section-category">WHAT I BRING</div>
+        <h2 class="section-heading">Expertise</h2>
       </div>
 
       <div class="expertise-grid">
-        <!-- Pill 1: Areas of Expertise -->
+        <!-- Card 1: Areas of Expertise -->
         <div class="expertise-card">
           <h4>🎯 Areas of Expertise</h4>
-          <div class="expertise-tag-cloud">
+          <div class="expertise-tag-cloud" style="margin-top: 4px;">
             <span class="expertise-tag">Programme Management</span>
             <span class="expertise-tag">Cross-functional Delivery</span>
             <span class="expertise-tag">Process Automation & Scalability</span>
@@ -1523,20 +1533,48 @@
           </div>
         </div>
 
-        <!-- Pill 2: Tools & Systems -->
-        <div class="expertise-card">
+        <!-- Card 2: Tools & Systems (Categorized) -->
+        <div class="expertise-card" style="gap: 14px;">
           <h4>🛠️ Tools & Systems</h4>
-          <div class="expertise-tag-cloud">
-            <span class="expertise-tag">Airtable</span>
-            <span class="expertise-tag">Quip</span>
-            <span class="expertise-tag">Coda</span>
-            <span class="expertise-tag">Radar</span>
-            <span class="expertise-tag">Apple Studio</span>
-            <span class="expertise-tag">Chaplin</span>
-            <span class="expertise-tag">Gadget</span>
-            <span class="expertise-tag">Conductor</span>
-            <span class="expertise-tag">Box</span>
-            <span class="expertise-tag">OneDAM</span>
+          
+          <div class="expertise-subgroup">
+            <span class="expertise-subgroup-title">Project & Documentation</span>
+            <div class="expertise-tag-cloud">
+              <span class="expertise-tag">Airtable</span>
+              <span class="expertise-tag">Quip</span>
+              <span class="expertise-tag">Coda</span>
+              <span class="expertise-tag">GitHub</span>
+            </div>
+          </div>
+
+          <div class="expertise-subgroup">
+            <span class="expertise-subgroup-title">Digital Asset Management</span>
+            <div class="expertise-tag-cloud">
+              <span class="expertise-tag">Box</span>
+              <span class="expertise-tag">OneDAM</span>
+            </div>
+          </div>
+
+          <div class="expertise-subgroup">
+            <span class="expertise-subgroup-title">Apple Internal Platforms</span>
+            <div class="expertise-tag-cloud">
+              <span class="expertise-tag">Apple Studio</span>
+              <span class="expertise-tag">Chaplin</span>
+              <span class="expertise-tag">Gadget</span>
+              <span class="expertise-tag">Conductor</span>
+              <span class="expertise-tag">Radar</span>
+              <span class="expertise-tag">Harbor</span>
+              <span class="expertise-tag">Milan</span>
+            </div>
+          </div>
+
+          <div class="expertise-subgroup">
+            <span class="expertise-subgroup-title">Apple AI Tools</span>
+            <div class="expertise-tag-cloud">
+              <span class="expertise-tag">Myna</span>
+              <span class="expertise-tag">Enchanté</span>
+              <span class="expertise-tag">Interlinked</span>
+            </div>
           </div>
         </div>
       </div>
@@ -1547,13 +1585,7 @@
   <footer>
     <div class="container">
       <div class="footer-content">
-        <p>Copyright © 2026 Sheena Wong. Built with Apple Human Interface Guidelines for GitHub Pages.</p>
-        <div class="footer-links">
-          <a href="#overview">Overview</a>
-          <a href="#achievements">Projects</a>
-          <a href="#pipeline">Automation Tools</a>
-          <a href="#expertise">Expertise</a>
-        </div>
+        <p>© 2026 Sheena Wong</p>
       </div>
     </div>
   </footer>
