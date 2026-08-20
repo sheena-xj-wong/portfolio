@@ -192,37 +192,40 @@
     }
 
     /* ==========================================================================
-       Apple Iconic 'hello' Vector
+       Apple Iconic 'hello' Headline Graphic
        ========================================================================== */
-    .apple-hello-container {
-      margin: 0 auto 28px;
+    .hero-headline-hello {
+      margin: 12px auto 24px;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      position: relative;
+      padding: 10px 0;
+      overflow: visible;
     }
     .apple-hello-img {
-      width: clamp(170px, 22vw, 250px);
+      width: clamp(240px, 40vw, 460px);
+      max-width: 100%;
       height: auto;
       display: block;
+      object-fit: contain;
+      overflow: visible;
       transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
       /* Dark mode: White/Silver crisp stroke with subtle ambient glow */
-      filter: drop-shadow(0 4px 18px rgba(255, 255, 255, 0.25));
+      filter: drop-shadow(0 4px 24px rgba(255, 255, 255, 0.25));
     }
     .apple-hello-img:hover {
-      transform: scale(1.03);
+      transform: scale(1.02);
     }
     [data-theme="light"] .apple-hello-img {
-      /* In light mode, invert to crisp Apple dark typography */
-      filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.12));
+      /* In light mode, crisp Apple dark typography */
+      filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.1));
     }
     /* If the SVG is dark by default, invert automatically for dark mode */
     .theme-invert-dark {
-      filter: invert(1) drop-shadow(0 4px 18px rgba(255, 255, 255, 0.3));
+      filter: invert(1) drop-shadow(0 4px 24px rgba(255, 255, 255, 0.35));
     }
     [data-theme="light"] .theme-invert-dark {
-      filter: invert(0) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.1));
+      filter: invert(0) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.08));
     }
 
     /* ==========================================================================
@@ -239,7 +242,7 @@
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: var(--color-apple-orange);
-      margin-bottom: 14px;
+      margin-bottom: 8px;
       font-family: var(--font-system);
     }
 
@@ -1066,13 +1069,13 @@
   <main class="container">
     <!-- Hero Section -->
     <section class="hero-section" id="overview">
-      <!-- Apple Iconic 'hello' Header -->
-      <div class="apple-hello-container">
-        <img src="apple-hello.svg" alt="Apple Hello" class="apple-hello-img theme-invert-dark" onerror="this.onerror=null; this.src='apple-hello.png';">
-      </div>
-
       <div class="hero-eyebrow">International Partner Asset Management</div>
-      <h1 class="hero-headline">Editorial precision. Brand integrity. Intelligent automation.</h1>
+      
+      <!-- Apple Iconic 'hello' Headline -->
+      <h1 class="hero-headline-hello">
+        <img src="apple-hello.svg" alt="Apple hello" class="apple-hello-img theme-invert-dark" onerror="this.onerror=null; this.src='apple-hello.png';">
+      </h1>
+
       <p class="hero-subhead">
         Lead Partner Asset Manager (APAC) at WPP supporting Apple — bridging the gap between high-impact creative QC, partner communications, and automated Python workflows across Apple TV+ and Apple Podcasts.
       </p>
