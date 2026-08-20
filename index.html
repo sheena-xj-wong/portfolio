@@ -195,10 +195,10 @@
     }
 
     /* ==========================================================================
-       Apple Official 'hello' Headline Graphic (Refined Proportions)
+       Apple Official 'hello' Headline Graphic (Balanced Hero Headline)
        ========================================================================== */
     .hero-headline-hello {
-      margin: 0 auto 12px;
+      margin: 4px auto 16px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -206,26 +206,29 @@
       overflow: visible;
     }
     .apple-hello-container {
-      width: clamp(140px, 18vw, 210px);
-      height: clamp(55px, 7.5vw, 85px);
+      width: clamp(280px, 38vw, 440px);
+      height: clamp(90px, 12vw, 135px);
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
       overflow: hidden;
-      filter: drop-shadow(0 4px 16px rgba(41, 151, 255, 0.22));
+      position: relative;
+      filter: drop-shadow(0 6px 24px rgba(41, 151, 255, 0.28));
       transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .apple-hello-container:hover {
-      transform: scale(1.03);
+      transform: scale(1.02);
     }
     [data-theme="light"] .apple-hello-container {
-      filter: drop-shadow(0 3px 10px rgba(0, 113, 227, 0.12));
+      filter: drop-shadow(0 4px 14px rgba(0, 113, 227, 0.15));
     }
+    /* Zoom in on the central 20% of the 500x500 Lottie canvas */
     .apple-hello-container svg {
       width: 100% !important;
       height: 100% !important;
-      transform: scale(1.4);
+      transform: scale(2.6);
+      transform-origin: center center;
       display: block;
       overflow: visible;
     }
