@@ -22,7 +22,7 @@ Live Site: **[sheena-xj-wong.github.io/portfolio/](https://sheena-xj-wong.github
 ### 1. Hero (`#overview`)
 - Eyebrow: `PARTNER OPERATIONS AND PROGRAMME MANAGEMENT`
 - Main Headline: Looping Apple `hello.` signature calligraphy
-- Subtitle: *"Bridging partner enablement, scalable process design and cross-functional delivery across APAC."*
+- Subtitle: *"Bridging partner enablement, scalable process design and cross-functional delivery across APAC. Curious by nature and increasingly hands-on with AI-assisted tooling."*
 - CTA Buttons: `View Projects` ➔ `#achievements`, `View Automation Tools` ➔ `#pipeline`
 
 ### 2. WORK I’VE LED — Projects (`#achievements`)
@@ -33,11 +33,11 @@ Live Site: **[sheena-xj-wong.github.io/portfolio/](https://sheena-xj-wong.github
   - Remediation of multi-title promotional artwork format across 112 international partners and 924 assets spanning macOS, iPadOS, and iOS.
 
 ### 3. TOOLS I’VE BUILT — Automation & Workflow Design (`#pipeline`)
-- **BA Art Reviewer** `[APPLE PODCASTS]` `[AI-ASSISTED TOOLING]` `[API INTEGRATION]`
+- **BA Art Reviewer** `[APPLE PODCASTS]` `[AI-ASSISTED BUILD]` `[API INTEGRATION]`
   - Automated Slack bot integrating public podcast metadata, translation API, and Slack Web API to streamline Business Affairs review workflows.
 - **Apple Originals: Programming Reminders** `[APPLE TV]` `[PROCESS AUTOMATION]` `[AGENT DESIGN]`
   - Serverless scheduled Python compute agent querying Quip trackers and distributing weekly refresh digests.
-- **TV Title Launch Checker** `[APPLE TV]` `[AI-ASSISTED TOOLING]` `[DATA VALIDATION]`
+- **TV Title Launch Checker** `[APPLE TV]` `[AI-ASSISTED BUILD]` `[DATA VALIDATION]`
   - Web-based validation tool cross-referencing Airtable title lists against Quip priorities to prevent launch timing discrepancies.
 
 ### 4. WHAT I BRING — Expertise (`#expertise`)
