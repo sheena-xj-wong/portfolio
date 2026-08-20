@@ -1081,28 +1081,10 @@
       flex-wrap: wrap;
       gap: 8px;
     }
-    .expertise-subgroup {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid var(--color-border-subtle);
-    }
-    .expertise-subgroup:last-child {
-      padding-bottom: 0;
-      border-bottom: none;
-    }
-    .expertise-subgroup-title {
-      font-size: 11.5px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--color-text-secondary);
-    }
     .expertise-tag {
-      font-size: 12px;
+      font-size: 12.5px;
       font-weight: 500;
-      padding: 6px 13px;
+      padding: 7px 14px;
       border-radius: var(--radius-capsule);
       background: var(--color-bg-secondary);
       border: 1px solid var(--color-border-subtle);
@@ -1258,6 +1240,7 @@
             <div class="badge-group">
               <span class="bento-badge badge-podcasts">Apple Podcasts</span>
               <span class="bento-badge badge-blue">Partner Enablement</span>
+              <span class="bento-badge badge-blue">Cross-Functional Delivery</span>
             </div>
             <h3 style="margin-bottom: 20px;">Ximalaya 喜马拉雅 Launch</h3>
 
@@ -1378,7 +1361,7 @@
             <div class="badge-group">
               <span class="bento-badge badge-podcasts">Apple Podcasts</span>
               <span class="bento-badge badge-blue">AI-Assisted Tooling</span>
-              <span class="bento-badge badge-blue">Workflow Improvement</span>
+              <span class="bento-badge badge-blue">API Integration</span>
             </div>
             <h3 style="margin-bottom: 20px;">BA Art Reviewer</h3>
 
@@ -1389,7 +1372,7 @@
 
             <div class="showcase-section-block">
               <h5 class="showcase-subhead">What / How</h5>
-              <p>A member of my team submits a quick form via the BA Art Reviewer Slack bot, which automatically fetches metadata, translates descriptions, tags reviewers and posts a standardised request for quick review.</p>
+              <p>A member of my team submits a quick form via the BA Art Reviewer Slack bot. Behind the scenes, it calls the iTunes Lookup API, podcast RSS feeds and the Apple Podcasts webpage to fetch metadata, uses the DeepL API to translate descriptions, then posts a standardised, tagged request back through the Slack Web API for quick review.</p>
             </div>
 
             <div class="showcase-section-block">
@@ -1520,10 +1503,10 @@
       </div>
 
       <div class="expertise-grid">
-        <!-- Card 1: Areas of Expertise -->
+        <!-- Card 1: Core Competencies -->
         <div class="expertise-card">
-          <h4>🎯 Areas of Expertise</h4>
-          <div class="expertise-tag-cloud" style="margin-top: 4px;">
+          <h4>🎯 Core Competencies</h4>
+          <div class="expertise-tag-cloud">
             <span class="expertise-tag">Programme Management</span>
             <span class="expertise-tag">Cross-functional Delivery</span>
             <span class="expertise-tag">Process Automation & Scalability</span>
@@ -1533,48 +1516,25 @@
           </div>
         </div>
 
-        <!-- Card 2: Tools & Systems (Categorized) -->
-        <div class="expertise-card" style="gap: 14px;">
+        <!-- Card 2: Tools & Systems -->
+        <div class="expertise-card">
           <h4>🛠️ Tools & Systems</h4>
-          
-          <div class="expertise-subgroup">
-            <span class="expertise-subgroup-title">Project & Documentation</span>
-            <div class="expertise-tag-cloud">
-              <span class="expertise-tag">Airtable</span>
-              <span class="expertise-tag">Quip</span>
-              <span class="expertise-tag">Coda</span>
-              <span class="expertise-tag">GitHub</span>
-            </div>
-          </div>
-
-          <div class="expertise-subgroup">
-            <span class="expertise-subgroup-title">Digital Asset Management</span>
-            <div class="expertise-tag-cloud">
-              <span class="expertise-tag">Box</span>
-              <span class="expertise-tag">OneDAM</span>
-            </div>
-          </div>
-
-          <div class="expertise-subgroup">
-            <span class="expertise-subgroup-title">Apple Internal Platforms</span>
-            <div class="expertise-tag-cloud">
-              <span class="expertise-tag">Apple Studio</span>
-              <span class="expertise-tag">Chaplin</span>
-              <span class="expertise-tag">Gadget</span>
-              <span class="expertise-tag">Conductor</span>
-              <span class="expertise-tag">Radar</span>
-              <span class="expertise-tag">Harbor</span>
-              <span class="expertise-tag">Milan</span>
-            </div>
-          </div>
-
-          <div class="expertise-subgroup">
-            <span class="expertise-subgroup-title">Apple AI Tools</span>
-            <div class="expertise-tag-cloud">
-              <span class="expertise-tag">Myna</span>
-              <span class="expertise-tag">Enchanté</span>
-              <span class="expertise-tag">Interlinked</span>
-            </div>
+          <div class="expertise-tag-cloud">
+            <span class="expertise-tag">Airtable</span>
+            <span class="expertise-tag">Coda</span>
+            <span class="expertise-tag">Quip</span>
+            <span class="expertise-tag">GitHub</span>
+            <span class="expertise-tag">Enchanté</span>
+            <span class="expertise-tag">Interlinked</span>
+            <span class="expertise-tag">Myna</span>
+            <span class="expertise-tag">Radar</span>
+            <span class="expertise-tag">Gadget</span>
+            <span class="expertise-tag">Conductor</span>
+            <span class="expertise-tag">Apple Studio</span>
+            <span class="expertise-tag">Chaplin</span>
+            <span class="expertise-tag">Milan</span>
+            <span class="expertise-tag">Box</span>
+            <span class="expertise-tag">OneDAM</span>
           </div>
         </div>
       </div>
