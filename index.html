@@ -206,10 +206,10 @@
     }
 
     /* ==========================================================================
-       Apple Official 'hello' Headline Graphic (Balanced Hero Headline)
+       Apple Official 'hello' Headline Graphic (Prominent Keynote Headline)
        ========================================================================== */
     .hero-headline-hello {
-      margin: 4px auto 16px;
+      margin: 12px auto 24px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -217,29 +217,26 @@
       overflow: visible;
     }
     .apple-hello-container {
-      width: clamp(280px, 38vw, 440px);
-      height: clamp(90px, 12vw, 135px);
+      width: clamp(340px, 52vw, 680px);
+      height: clamp(120px, 18vw, 210px);
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      overflow: hidden;
+      overflow: visible;
       position: relative;
-      filter: drop-shadow(0 6px 24px rgba(41, 151, 255, 0.28));
+      filter: drop-shadow(0 8px 32px rgba(41, 151, 255, 0.35));
       transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .apple-hello-container:hover {
       transform: scale(1.02);
     }
     [data-theme="light"] .apple-hello-container {
-      filter: drop-shadow(0 4px 14px rgba(0, 113, 227, 0.15));
+      filter: drop-shadow(0 6px 18px rgba(0, 113, 227, 0.18));
     }
-    /* Zoom in on the central 20% of the 500x500 Lottie canvas */
     .apple-hello-container svg {
       width: 100% !important;
       height: 100% !important;
-      transform: scale(2.6);
-      transform-origin: center center;
       display: block;
       overflow: visible;
     }
@@ -277,7 +274,7 @@
        Hero Section
        ========================================================================== */
     .hero-section {
-      padding: 48px 0 40px;
+      padding: 56px 0 44px;
       text-align: center;
     }
 
@@ -1078,14 +1075,14 @@
     /* Mobile & Small Screen Optimizations */
     @media (max-width: 640px) {
       .hero-section {
-        padding: 36px 0 28px;
+        padding: 40px 0 32px;
       }
       .hero-headline-hello {
-        margin: 0 auto 10px;
+        margin: 0 auto 12px;
       }
       .apple-hello-container {
-        width: 220px;
-        height: 70px;
+        width: clamp(280px, 80vw, 360px);
+        height: clamp(95px, 26vw, 120px);
       }
       .hero-subhead {
         font-size: 16px;
@@ -1148,7 +1145,7 @@
         <button class="theme-toggle-btn" id="theme-btn" title="Toggle Appearance">
           <span id="theme-icon">☀️</span>
         </button>
-        <a href="mailto:sheena_wong@apple.com" class="btn-apple-sm">Contact</a>
+        <a href="mailto:sheena.xj.wong@gmail.com" class="btn-apple-sm">Contact</a>
       </div>
     </div>
   </nav>
@@ -1462,6 +1459,36 @@
 
               <p style="font-size: 11px; color: var(--color-text-tertiary); margin-top: 8px;">No further entries are scheduled beyond the dates listed above.</p>
               <p style="font-size: 11px; color: var(--color-text-secondary); margin-top: 10px;">Best,<br><strong>INTL PAM Automation</strong></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Automation Item 3: TV Title Launch Checker -->
+        <div class="showcase-item">
+          <div>
+            <div class="bento-badge" style="color: var(--color-apple-blue); background: rgba(41, 151, 255, 0.1);">Web App & Workflow Automation</div>
+            <h3 style="margin-bottom: 20px;">TV Title Launch Checker</h3>
+
+            <div class="showcase-section-block">
+              <h5 class="showcase-subhead">Why</h5>
+              <p>Title lists submitted for Apple Originals Unentitled Epic Stage artwork required manual validation against live TV Title Priorities in Quip and Airtable. Manually checking release schedules across dozens of titles increased the risk of missing new launches, submitting duplicate entries, or missing critical montage refresh cutoffs.</p>
+            </div>
+
+            <div class="showcase-section-block">
+              <h5 class="showcase-subhead">What / How</h5>
+              <p>Developed a web-based automated checker that ingests submitted Airtable title lists and reconciles them against reference launch priorities. By setting the target montage refresh date and time, the tool automatically scans release dates, checks UMC IDs, and flags titles launching after the requested refresh date within the same month.</p>
+            </div>
+
+            <div class="showcase-section-block">
+              <h5 class="showcase-subhead">Impact</h5>
+              <p>Eliminated manual cross-referencing overhead for Apple Originals montage refreshes, preventing launch date discrepancies, catching missing or duplicate titles before submission, and ensuring 100% accurate Epic Stage curation.</p>
+            </div>
+          </div>
+
+          <!-- TV Title Checker Image Showcase -->
+          <div class="tv-media-box">
+            <div class="tv-hero-image-wrap">
+              <img src="tv-title-checker.png" alt="TV Title Launch Checker Web Tool UI" class="tv-hero-image">
             </div>
           </div>
         </div>
