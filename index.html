@@ -227,14 +227,16 @@
       cursor: pointer;
       overflow: visible;
       position: relative;
-      filter: drop-shadow(0 8px 32px rgba(41, 151, 255, 0.35));
-      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      /* Invert black stroke to pure white in dark mode with luminous ambient glow */
+      filter: invert(1) brightness(1.8) drop-shadow(0 8px 32px rgba(255, 255, 255, 0.45));
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
     }
     .apple-hello-container:hover {
       transform: scale(1.02);
     }
     [data-theme="light"] .apple-hello-container {
-      filter: drop-shadow(0 6px 18px rgba(0, 113, 227, 0.18));
+      /* In light mode, render in crisp black Apple typography */
+      filter: invert(0) brightness(1) drop-shadow(0 4px 14px rgba(0, 0, 0, 0.14));
     }
     .apple-hello-container svg {
       width: 100% !important;
@@ -954,13 +956,13 @@
       overflow: hidden;
       border: 1px solid var(--color-border);
       box-shadow: var(--shadow-apple);
-      background: #000000;
+      background: transparent;
     }
     .tv-hero-image {
       width: 100%;
       height: auto;
       display: block;
-      object-fit: cover;
+      object-fit: contain;
       transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .tv-hero-image-wrap:hover .tv-hero-image {
