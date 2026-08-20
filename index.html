@@ -192,47 +192,37 @@
     }
 
     /* ==========================================================================
-       Apple Iconic 'hello' Calligraphy
+       Apple Iconic 'hello' Vector
        ========================================================================== */
     .apple-hello-container {
-      margin: 0 auto 24px;
+      margin: 0 auto 28px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       position: relative;
     }
-    .apple-hello-svg {
-      width: clamp(140px, 18vw, 210px);
+    .apple-hello-img {
+      width: clamp(170px, 22vw, 250px);
       height: auto;
-      overflow: visible;
-      filter: drop-shadow(0 4px 16px rgba(41, 151, 255, 0.25));
+      display: block;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
+      /* Dark mode: White/Silver crisp stroke with subtle ambient glow */
+      filter: drop-shadow(0 4px 18px rgba(255, 255, 255, 0.25));
     }
-    [data-theme="light"] .apple-hello-svg {
-      filter: drop-shadow(0 4px 12px rgba(0, 113, 227, 0.15));
+    .apple-hello-img:hover {
+      transform: scale(1.03);
     }
-    .hello-path {
-      fill: none;
-      stroke-width: 4.5;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      stroke-dasharray: 1000;
-      stroke-dashoffset: 1000;
-      animation: drawHello 2.4s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+    [data-theme="light"] .apple-hello-img {
+      /* In light mode, invert to crisp Apple dark typography */
+      filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.12));
     }
-    .hello-dot {
-      opacity: 0;
-      animation: fadeInDot 0.4s ease 2.2s forwards;
+    /* If the SVG is dark by default, invert automatically for dark mode */
+    .theme-invert-dark {
+      filter: invert(1) drop-shadow(0 4px 18px rgba(255, 255, 255, 0.3));
     }
-    @keyframes drawHello {
-      to {
-        stroke-dashoffset: 0;
-      }
-    }
-    @keyframes fadeInDot {
-      to {
-        opacity: 1;
-      }
+    [data-theme="light"] .theme-invert-dark {
+      filter: invert(0) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.1));
     }
 
     /* ==========================================================================
@@ -1076,29 +1066,9 @@
   <main class="container">
     <!-- Hero Section -->
     <section class="hero-section" id="overview">
-      <!-- Apple Iconic 'hello' Calligraphy Header -->
+      <!-- Apple Iconic 'hello' Header -->
       <div class="apple-hello-container">
-        <svg class="apple-hello-svg" viewBox="0 0 280 110" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Apple Iconic Hello">
-          <defs>
-            <linearGradient id="appleHelloGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#2997ff" />
-              <stop offset="40%" stop-color="#bf5af2" />
-              <stop offset="75%" stop-color="#ff375f" />
-              <stop offset="100%" stop-color="#ff9f0a" />
-            </linearGradient>
-          </defs>
-          <!-- Cursive 'hello.' Path -->
-          <path class="hello-path" stroke="url(#appleHelloGrad)" d="
-            M 24,92 C 26,72 32,30 38,16 C 42,6 50,8 50,22 C 50,44 42,76 40,94 
-            M 38,62 C 44,50 56,42 66,42 C 78,42 80,52 78,66 C 76,78 74,90 76,92 C 78,94 84,94 90,88
-            M 92,72 C 92,54 102,44 114,44 C 126,44 128,54 122,68 C 114,84 94,84 94,84 C 94,84 102,94 116,94 C 126,94 132,88 136,82
-            M 142,16 C 144,34 140,74 138,90 C 138,94 142,96 148,90
-            M 160,16 C 162,34 158,74 156,90 C 156,94 160,96 166,90
-            M 188,48 C 176,48 168,58 168,70 C 168,84 180,94 192,94 C 206,94 214,82 214,68 C 214,54 202,48 188,48 Z
-            M 210,70 C 216,68 226,68 234,72
-          " />
-          <circle class="hello-dot" cx="242" cy="88" r="4.5" fill="url(#appleHelloGrad)" />
-        </svg>
+        <img src="apple-hello.svg" alt="Apple Hello" class="apple-hello-img theme-invert-dark" onerror="this.onerror=null; this.src='apple-hello.png';">
       </div>
 
       <div class="hero-eyebrow">International Partner Asset Management</div>
