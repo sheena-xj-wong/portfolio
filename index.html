@@ -438,11 +438,17 @@
       text-transform: uppercase;
       padding: 4px 10px;
       border-radius: var(--radius-capsule);
-      background: var(--color-bg-pill);
-      color: var(--color-text-secondary);
       width: fit-content;
       margin-bottom: 18px;
-      border: 1px solid var(--color-border-subtle);
+      /* Default unified Apple Blue badge */
+      color: #2997ff;
+      background: rgba(41, 151, 255, 0.12);
+      border: 1px solid rgba(41, 151, 255, 0.32);
+    }
+    [data-theme="light"] .bento-badge {
+      color: #0071e3;
+      background: rgba(0, 113, 227, 0.1);
+      border: 1px solid rgba(0, 113, 227, 0.28);
     }
     .badge-group {
       display: flex;
@@ -454,20 +460,38 @@
     .badge-group .bento-badge {
       margin-bottom: 0;
     }
+    /* Apple Podcasts - Purple */
     .bento-badge.badge-podcasts {
-      color: #bf5af2;
-      background: rgba(191, 90, 242, 0.12);
-      border-color: rgba(191, 90, 242, 0.28);
+      color: #bf5af2 !important;
+      background: rgba(191, 90, 242, 0.15) !important;
+      border-color: rgba(191, 90, 242, 0.35) !important;
     }
     [data-theme="light"] .bento-badge.badge-podcasts {
-      color: #8929bf;
-      background: rgba(175, 82, 222, 0.1);
-      border-color: rgba(175, 82, 222, 0.25);
+      color: #8929bf !important;
+      background: rgba(175, 82, 222, 0.12) !important;
+      border-color: rgba(175, 82, 222, 0.3) !important;
     }
-    .bento-badge.badge-partner-launch {
-      color: var(--color-apple-cyan);
-      background: rgba(255, 159, 10, 0.12);
-      border-color: rgba(255, 159, 10, 0.25);
+    /* Apple TV - Black / Dark Slate */
+    .bento-badge.badge-appletv {
+      color: #f5f5f7 !important;
+      background: rgba(255, 255, 255, 0.14) !important;
+      border-color: rgba(255, 255, 255, 0.28) !important;
+    }
+    [data-theme="light"] .bento-badge.badge-appletv {
+      color: #1d1d1f !important;
+      background: rgba(0, 0, 0, 0.08) !important;
+      border-color: rgba(0, 0, 0, 0.2) !important;
+    }
+    /* Unified Apple Blue for all other badges */
+    .bento-badge.badge-blue {
+      color: #2997ff !important;
+      background: rgba(41, 151, 255, 0.12) !important;
+      border-color: rgba(41, 151, 255, 0.32) !important;
+    }
+    [data-theme="light"] .bento-badge.badge-blue {
+      color: #0071e3 !important;
+      background: rgba(0, 113, 227, 0.1) !important;
+      border-color: rgba(0, 113, 227, 0.28) !important;
     }
 
     .bento-card h3 {
@@ -1310,17 +1334,17 @@
 
             <div class="showcase-section-block">
               <h5 class="showcase-subhead">Why</h5>
-              <p>Following a platform redesign, an engineering automation gap left 112 international partners without updated artwork across several key offer placements, cascading across macOS, iPadOS and iOS and risking an inconsistent experience for Apple TV users worldwide.</p>
+              <p>Following a platform redesign, an engineering automation gap left 112 international partners without multi-title promotional artwork in the latest format across several key offer placements, risking an inconsistent experience.</p>
             </div>
 
             <div class="showcase-section-block">
               <h5 class="showcase-subhead">What / How</h5>
-              <p>I led the team's response, launching a large-scale outreach project to proactively gather title lists from affected partners and identify the full scope of missing artwork. I then used an internal asset-building tool to create new assets at scale, closing the automation gap without an existing playbook to follow.</p>
+              <p>I led the team's response, launching a large-scale outreach project to gather title lists from affected partners and scope the missing artwork. We then used an internal asset-building tool to create and programme new assets using those lists, closing the gap without an existing playbook.</p>
             </div>
 
             <div class="showcase-section-block">
               <h5 class="showcase-subhead">Impact</h5>
-              <p>Restored a consistent, up-to-date experience for Apple TV users across macOS, iPadOS and iOS, delivering 924 new assets across all 112 affected partners.</p>
+              <p>Restored a consistent, up-to-date experience for Apple TV users across macOS, iPadOS and iOS, delivering 924 new assets at scale.</p>
             </div>
           </div>
 
@@ -1345,22 +1369,25 @@
         <!-- Automation Item 1: BA Art Reviewer -->
         <div class="showcase-item">
           <div>
-            <div class="bento-badge badge-blue">Slack Bot & Workflow Automation</div>
+            <div class="badge-group">
+              <span class="bento-badge badge-podcasts">Apple Podcasts</span>
+              <span class="bento-badge badge-blue">AI-Assisted Tooling</span>
+            </div>
             <h3 style="margin-bottom: 20px;">BA Art Reviewer</h3>
 
             <div class="showcase-section-block">
               <h5 class="showcase-subhead">Why</h5>
-              <p>Currently, escalating Podcasts artwork reviews to the BA team requires manually gathering metadata, translating descriptions, and tagging reviewers. Inconsistent formatting also forces the BA team to spend extra time hunting for context before they can respond.</p>
+              <p>Escalating Podcasts artwork reviews to Apple's Business Affairs (BA) team currently requires manually gathering metadata, translating descriptions and tagging reviewers. Inconsistent formatting also forces the BA team to spend extra time hunting for context before they can respond.</p>
             </div>
 
             <div class="showcase-section-block">
               <h5 class="showcase-subhead">What / How</h5>
-              <p>A PAM DRI simply submits a quick form via the BA Art Reviewer Slack bot, and the bot automatically fetches metadata, translates descriptions, tags reviewers, and posts a standardized request for quick review.</p>
+              <p>A member of my team submits a quick form via the BA Art Reviewer Slack bot, which automatically fetches metadata, translates descriptions, tags reviewers and posts a standardised request for quick review.</p>
             </div>
 
             <div class="showcase-section-block">
               <h5 class="showcase-subhead">Impact (Projected)</h5>
-              <p>Significantly reduced manual overhead for both the PAM team and Business Affairs. By automating data collection and standardizing requests, this tool will eliminate time spent on context gathering, accelerate turnaround times for artwork approvals, and streamline the entire escalation workflow.</p>
+              <p>Significantly reduces manual overhead for both the PAM team and Business Affairs. By automating data collection and standardising requests, this tool eliminates time spent on context gathering, accelerates turnaround times for artwork approvals and streamlines the entire escalation workflow.</p>
             </div>
           </div>
 
@@ -1409,89 +1436,32 @@
         <!-- Automation Item 2: Apple Originals Programming Reminders -->
         <div class="showcase-item">
           <div>
-            <div class="bento-badge badge-blue">Automated Agent</div>
+            <div class="badge-group">
+              <span class="bento-badge badge-appletv">Apple TV</span>
+              <span class="bento-badge badge-blue">Process Automation</span>
+            </div>
             <h3 style="margin-bottom: 20px;">Apple Originals: Programming Reminders</h3>
 
             <div class="showcase-section-block">
               <h5 class="showcase-subhead">Why</h5>
-              <p>Montage artwork update requests for the Home and Apple TV tab on Apple TV were submitted monthly by Editors, each tagged with a programming date, but nothing tracked them. The team has kept a zero-missed streak since August 2024 through manual Quip checks alone, but that relied on consistent manual effort and had no safety net if something slipped.</p>
+              <p>Editors submit monthly artwork update requests for Apple Originals on the Home and Apple TV tabs, each tagged with a programming date, but nothing automated tracked them. The team's zero-missed streak since August 2024 relied entirely on manual Quip checks, with no safety net if something slipped.</p>
             </div>
 
             <div class="showcase-section-block">
               <h5 class="showcase-subhead">What / How</h5>
-              <p>Designed a task scanner that checks Quip for requests against their tagged programming dates and sends automated weekly summaries, flagging anything coming up before it's missed.</p>
+              <p>I designed an agent that checks Quip requests against their tagged dates and sends weekly summaries, flagging anything due the following week. It runs autonomously on Apple's internal backend so it keeps working even when I'm offline or out of the office.</p>
             </div>
 
             <div class="showcase-section-block">
               <h5 class="showcase-subhead">Impact</h5>
-              <p>Removes reliance on manual checks to protect the streak, giving the team a repeatable safeguard to keep it going rather than depending on catching everything by hand.</p>
+              <p>Replaced manual vigilance with a repeatable safeguard, protecting the streak without relying on catching everything by hand.</p>
             </div>
           </div>
 
-          <!-- Apple Mail Window Mockup -->
-          <div class="mail-mockup-window">
-            <div class="mail-window-toolbar">
-              <div class="mail-window-traffic">
-                <span class="traffic-dot traffic-red"></span>
-                <span class="traffic-dot traffic-yellow"></span>
-                <span class="traffic-dot traffic-green"></span>
-              </div>
-              <div class="mail-toolbar-icons">
-                <span>🗑️</span>
-                <span>↩️</span>
-                <span>↪️</span>
-                <span>🚩</span>
-              </div>
-            </div>
-
-            <div class="mail-content-body">
-              <div class="mail-header-info">
-                <div class="mail-sender-avatar">P</div>
-                <div>
-                  <div class="mail-subject-line">Apple Originals Programming Weekly Refresh Summary - No Entries Due Mon 20 Jul - Sun 26 Jul 2026</div>
-                  <div class="mail-to-line">To: Intl_Partner_Asset_Managers@group.apple.com</div>
-                </div>
-              </div>
-
-              <div class="mail-h1">Apple Originals Programming – Weekly Refresh Summary</div>
-              <p style="font-size: 11.5px; color: var(--color-text-secondary); margin-bottom: 8px;">Hi INTL PAM Team,</p>
-              <p style="font-size: 11.5px; margin-bottom: 8px;">No entries are due for refresh next week (<strong>Mon 20 Jul – Sun 26 Jul 2026</strong>).</p>
-              <p style="font-size: 11.5px; color: var(--color-text-secondary); margin-bottom: 8px;">For reference, here are the nearest upcoming Refresh Target Dates from the tracker:</p>
-
-              <table class="mail-table">
-                <thead>
-                  <tr>
-                    <th>Refresh Target Date</th>
-                    <th>DRI</th>
-                    <th>Assigned Variants/Territories</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Wed 15 Jul</td>
-                    <td>Yumiho</td>
-                    <td class="mail-tag-blue">JP</td>
-                  </tr>
-                  <tr>
-                    <td>Wed 15 Jul</td>
-                    <td>Yumiho</td>
-                    <td class="mail-tag-blue">Nordics</td>
-                  </tr>
-                  <tr>
-                    <td>Fri 17 Jul</td>
-                    <td>Eunice</td>
-                    <td class="mail-tag-blue">CA</td>
-                  </tr>
-                  <tr>
-                    <td>Fri 17 Jul</td>
-                    <td>Eunice</td>
-                    <td class="mail-tag-blue">CA | Home</td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <p style="font-size: 11px; color: var(--color-text-tertiary); margin-top: 8px;">No further entries are scheduled beyond the dates listed above.</p>
-              <p style="font-size: 11px; color: var(--color-text-secondary); margin-top: 10px;">Best,<br><strong>INTL PAM Automation</strong></p>
+          <!-- Apple Originals Mail Window Screenshot Showcase -->
+          <div class="tv-media-box">
+            <div class="tv-hero-image-wrap">
+              <img src="apple-originals-reminders.png" alt="Apple Originals Programming Weekly Refresh Summary Email" class="tv-hero-image">
             </div>
           </div>
         </div>
