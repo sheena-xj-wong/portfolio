@@ -6,6 +6,9 @@
   <title>Sheena Wong — Lead Partner Asset Manager (APAC)</title>
   <meta name="description" content="Portfolio of Sheena Wong — APAC Lead for International Partner Asset Management. Editorial QC, Design Standards & Workflow Automation for Apple TV+ and Apple Podcasts.">
   
+  <!-- Lottie Animation Web Library for Apple Hello JSON -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+  
   <style>
     /* ==========================================================================
        Apple Design System Tokens & Foundations
@@ -192,15 +195,32 @@
     }
 
     /* ==========================================================================
-       Apple Iconic 'hello' Headline Graphic
+       Apple Iconic 'hello' Headline (Lottie JSON & SVG)
        ========================================================================== */
     .hero-headline-hello {
-      margin: 12px auto 24px;
+      margin: 10px auto 20px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 10px 0;
+      padding: 6px 0;
       overflow: visible;
+    }
+    .apple-hello-lottie {
+      width: clamp(240px, 42vw, 480px);
+      height: clamp(100px, 18vw, 200px);
+      max-width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
+      filter: drop-shadow(0 4px 20px rgba(255, 255, 255, 0.25));
+    }
+    .apple-hello-lottie:hover {
+      transform: scale(1.02);
+    }
+    [data-theme="light"] .apple-hello-lottie {
+      filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.1));
     }
     .apple-hello-img {
       width: clamp(240px, 40vw, 460px);
@@ -210,17 +230,14 @@
       object-fit: contain;
       overflow: visible;
       transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
-      /* Dark mode: White/Silver crisp stroke with subtle ambient glow */
       filter: drop-shadow(0 4px 24px rgba(255, 255, 255, 0.25));
     }
     .apple-hello-img:hover {
       transform: scale(1.02);
     }
     [data-theme="light"] .apple-hello-img {
-      /* In light mode, crisp Apple dark typography */
       filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.1));
     }
-    /* If the SVG is dark by default, invert automatically for dark mode */
     .theme-invert-dark {
       filter: invert(1) drop-shadow(0 4px 24px rgba(255, 255, 255, 0.35));
     }
@@ -1071,9 +1088,11 @@
     <section class="hero-section" id="overview">
       <div class="hero-eyebrow">International Partner Asset Management</div>
       
-      <!-- Apple Iconic 'hello' Headline -->
+      <!-- Apple Iconic 'hello' Headline (Supports Lottie JSON, SVG, PNG) -->
       <h1 class="hero-headline-hello">
-        <img src="apple-hello.svg" alt="Apple hello" class="apple-hello-img theme-invert-dark" onerror="this.onerror=null; this.src='apple-hello.png';">
+        <div id="lottie-hello" class="apple-hello-lottie">
+          <img src="apple-hello.svg" alt="Apple hello" class="apple-hello-img theme-invert-dark" onerror="this.onerror=null; this.src='apple-hello.png';">
+        </div>
       </h1>
 
       <p class="hero-subhead">
@@ -1509,8 +1528,9 @@
     </div>
   </footer>
 
-  <!-- Theme Switcher Script -->
+  <!-- Theme Switcher & Apple Hello Lottie Script -->
   <script>
+    // Apple Theme Switcher
     const themeBtn = document.getElementById('theme-btn');
     const themeIcon = document.getElementById('theme-icon');
 
@@ -1526,6 +1546,56 @@
     themeBtn.addEventListener('click', () => {
       const current = document.documentElement.getAttribute('data-theme');
       setTheme(current === 'dark' ? 'light' : 'dark');
+    });
+
+    // Apple Iconic Hello Lottie Player Initialization (Supports apple-hello.json and hello.json)
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('lottie-hello');
+      if (!container || typeof lottie === 'undefined') return;
+
+      // Try loading apple-hello.json first
+      fetch('apple-hello.json')
+        .then(res => {
+          if (!res.ok) throw new Error('Not found');
+          return res.json();
+        })
+        .then(animationData => {
+          container.innerHTML = '';
+          const anim = lottie.loadAnimation({
+            container: container,
+            renderer: 'svg',
+            loop: false,
+            autoplay: true,
+            animationData: animationData
+          });
+          container.addEventListener('click', () => {
+            anim.goToAndPlay(0, true);
+          });
+        })
+        .catch(() => {
+          // Fallback: Try hello.json
+          fetch('hello.json')
+            .then(res => {
+              if (!res.ok) throw new Error('Not found');
+              return res.json();
+            })
+            .then(animationData => {
+              container.innerHTML = '';
+              const anim = lottie.loadAnimation({
+                container: container,
+                renderer: 'svg',
+                loop: false,
+                autoplay: true,
+                animationData: animationData
+              });
+              container.addEventListener('click', () => {
+                anim.goToAndPlay(0, true);
+              });
+            })
+            .catch(() => {
+              // Retains fallback <img> tag seamlessly
+            });
+        });
     });
   </script>
 </body>
