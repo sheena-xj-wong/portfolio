@@ -195,33 +195,39 @@
     }
 
     /* ==========================================================================
-       Apple Official 'hello' Headline Graphic
+       Apple Official 'hello' Headline Graphic (Refined Proportions)
        ========================================================================== */
     .hero-headline-hello {
-      margin: 8px auto 20px;
+      margin: 0 auto 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 6px 0;
+      padding: 0;
       overflow: visible;
     }
     .apple-hello-container {
-      width: clamp(260px, 46vw, 540px);
-      max-width: 100%;
-      height: auto;
+      width: clamp(140px, 18vw, 210px);
+      height: clamp(55px, 7.5vw, 85px);
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      overflow: visible;
-      filter: drop-shadow(0 6px 28px rgba(41, 151, 255, 0.28));
+      overflow: hidden;
+      filter: drop-shadow(0 4px 16px rgba(41, 151, 255, 0.22));
       transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .apple-hello-container:hover {
-      transform: scale(1.02);
+      transform: scale(1.03);
     }
     [data-theme="light"] .apple-hello-container {
-      filter: drop-shadow(0 4px 14px rgba(0, 113, 227, 0.14));
+      filter: drop-shadow(0 3px 10px rgba(0, 113, 227, 0.12));
+    }
+    .apple-hello-container svg {
+      width: 100% !important;
+      height: 100% !important;
+      transform: scale(1.4);
+      display: block;
+      overflow: visible;
     }
     .apple-hello-svg {
       width: 100%;
@@ -257,7 +263,7 @@
        Hero Section
        ========================================================================== */
     .hero-section {
-      padding: 96px 0 64px;
+      padding: 48px 0 40px;
       text-align: center;
     }
 
@@ -1571,48 +1577,47 @@
       setTheme(current === 'dark' ? 'light' : 'dark');
     });
 
-    // Apple Iconic Hello Lottie Player Initialization (Supports apple-hello.json and hello.json)
+    // Apple Iconic Hello Lottie Player Initialization (Continuous Loop)
     document.addEventListener('DOMContentLoaded', () => {
       const container = document.getElementById('lottie-hello');
       if (!container || typeof lottie === 'undefined') return;
 
-      // Try loading apple-hello.json first
-      fetch('apple-hello.json')
+      const lottieSettings = {
+        container: container,
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        rendererSettings: {
+          preserveAspectRatio: 'xMidYMid meet',
+          progressiveLoad: true,
+          hideOnTransparent: true
+        }
+      };
+
+      // Try loading hello.json / apple-hello.json
+      fetch('hello.json')
         .then(res => {
           if (!res.ok) throw new Error('Not found');
           return res.json();
         })
         .then(animationData => {
           container.innerHTML = '';
-          const anim = lottie.loadAnimation({
-            container: container,
-            renderer: 'svg',
-            loop: false,
-            autoplay: true,
+          lottie.loadAnimation({
+            ...lottieSettings,
             animationData: animationData
-          });
-          container.addEventListener('click', () => {
-            anim.goToAndPlay(0, true);
           });
         })
         .catch(() => {
-          // Fallback: Try hello.json
-          fetch('hello.json')
+          fetch('apple-hello.json')
             .then(res => {
               if (!res.ok) throw new Error('Not found');
               return res.json();
             })
             .then(animationData => {
               container.innerHTML = '';
-              const anim = lottie.loadAnimation({
-                container: container,
-                renderer: 'svg',
-                loop: false,
-                autoplay: true,
+              lottie.loadAnimation({
+                ...lottieSettings,
                 animationData: animationData
-              });
-              container.addEventListener('click', () => {
-                anim.goToAndPlay(0, true);
               });
             })
             .catch(() => {
