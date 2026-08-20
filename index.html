@@ -211,21 +211,21 @@
        Apple Official 'hello' Headline Graphic (Prominent Keynote Headline)
        ========================================================================== */
     .hero-headline-hello {
-      margin: 2px auto 8px;
+      margin: -10px auto -6px;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 0;
-      overflow: visible;
+      overflow: hidden;
     }
     .apple-hello-container {
       width: clamp(480px, 72vw, 930px);
-      height: clamp(135px, 21vw, 240px);
+      height: clamp(110px, 16vw, 190px);
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      overflow: visible;
+      overflow: hidden;
       position: relative;
       /* Invert black stroke to pure white in dark mode with luminous ambient glow */
       filter: invert(1) brightness(1.8) drop-shadow(0 8px 32px rgba(255, 255, 255, 0.45));
@@ -241,6 +241,8 @@
     .apple-hello-container svg {
       width: 100% !important;
       height: 100% !important;
+      transform: scale(1.42);
+      transform-origin: center center;
       display: block;
       overflow: visible;
     }
@@ -250,7 +252,7 @@
        Hero Section
        ========================================================================== */
     .hero-section {
-      padding: 36px 0 32px;
+      padding: 24px 0 24px;
       text-align: center;
     }
 
@@ -1086,14 +1088,14 @@
     /* Mobile & Small Screen Optimizations */
     @media (max-width: 640px) {
       .hero-section {
-        padding: 24px 0 20px;
+        padding: 16px 0 16px;
       }
       .hero-headline-hello {
-        margin: 0 auto 6px;
+        margin: -6px auto -4px;
       }
       .apple-hello-container {
-        width: clamp(340px, 92vw, 480px);
-        height: clamp(95px, 26vw, 135px);
+        width: clamp(320px, 92vw, 460px);
+        height: clamp(75px, 20vw, 105px);
       }
       .hero-subhead {
         font-size: 16px;
