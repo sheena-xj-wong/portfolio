@@ -64,6 +64,7 @@ Ensure the following assets are present in the root folder alongside `index.html
 | `brand-page-audit.png` | AMC+ Apple TV platform audit screenshot | Brand Page Audit Card |
 | `apple-originals-reminders.png` | macOS Mail summary digest screenshot | Programming Reminders Card |
 | `tv-title-checker.png` | Web tool interface screenshot | TV Title Launch Checker Card |
+| `robots.txt` | Disallow web crawlers / no-index directive | Repository Root |
 
 ---
 
